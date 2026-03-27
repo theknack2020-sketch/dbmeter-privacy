@@ -13,189 +13,53 @@
             line-height: 1.7;
             padding: 40px 20px;
         }
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 6px;
-        }
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #fff;
-            margin-top: 36px;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #ccc;
-            margin-top: 20px;
-            margin-bottom: 8px;
-        }
-        p {
-            margin-bottom: 14px;
-            color: #b0b0b0;
-            font-size: 15px;
-        }
-        .subtitle {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 32px;
-        }
-        .app-name {
-            color: #4ade80;
-            font-weight: 600;
-        }
+        .container { max-width: 680px; margin: 0 auto; }
+        h1 { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+        h2 { font-size: 20px; font-weight: 600; color: #fff; margin-top: 36px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        p { margin-bottom: 14px; color: #b0b0b0; font-size: 15px; }
+        .subtitle { color: #666; font-size: 14px; margin-bottom: 32px; }
+        .app-name { color: #E8A40E; font-weight: 600; }
         strong { color: #e0e0e0; }
-        a {
-            color: #4ade80;
-            text-decoration: none;
-        }
+        a { color: #E8A40E; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        ul {
-            margin: 8px 0 14px 20px;
-            color: #b0b0b0;
-            font-size: 15px;
-        }
+        ul { margin: 8px 0 14px 20px; color: #b0b0b0; font-size: 15px; }
         li { margin-bottom: 4px; }
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            margin: 48px 0;
-        }
-        .lang-switch {
-            display: inline-flex;
-            gap: 8px;
-            margin-bottom: 32px;
-        }
-        .lang-switch a {
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            background: rgba(255,255,255,0.06);
-            color: #999;
-            transition: all 0.2s;
-        }
-        .lang-switch a.active, .lang-switch a:hover {
-            background: rgba(74,222,128,0.15);
-            color: #4ade80;
-        }
-        .section { display: none; }
-        .section.active { display: block; }
+        .links { margin-top: 40px; text-align: center; }
+        .links a { display: inline-block; padding: 10px 24px; margin: 8px; border-radius: 20px; font-size: 14px; font-weight: 600; background: rgba(232,164,14,0.12); color: #E8A40E; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🎙️ <span class="app-name">dB Meter</span></h1>
-        <p class="subtitle">Privacy Policy</p>
+        <p class="subtitle">Privacy Policy — Last updated: March 27, 2026</p>
 
-        <div class="lang-switch">
-            <a href="#" class="active" onclick="switchLang('en', this); return false;">English</a>
-            <a href="#" onclick="switchLang('tr', this); return false;">Türkçe</a>
+        <h2>Overview</h2>
+        <p><strong>dB Meter</strong> is a sound level measurement app developed by TheKnack. Your privacy is our priority.</p>
+
+        <h2>Data We Collect</h2>
+        <p><strong>We do not collect any personal data.</strong> dB Meter does not require an account, does not use analytics SDKs, does not contain ads, and does not track you in any way.</p>
+
+        <h2>Microphone Access</h2>
+        <p>The app requests microphone access solely to measure ambient sound levels. Audio is processed in real-time on your device and is never recorded, stored, or transmitted.</p>
+
+        <h2>Location Data</h2>
+        <p>If you grant location permission, your approximate location is stored locally with your measurement records. Location data never leaves your device.</p>
+
+        <h2>In-App Purchases</h2>
+        <p>dB Meter uses Apple's StoreKit for optional in-app purchases. No other third-party payment services are used.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>We do not knowingly collect information from children under 13.</p>
+
+        <h2>Contact</h2>
+        <p><a href="mailto:theknack2020@gmail.com">theknack2020@gmail.com</a></p>
+
+        <div class="links">
+            <a href="privacy/">Privacy Policy</a>
+            <a href="terms/">Terms of Use</a>
+            <a href="support/">Support</a>
         </div>
-
-        <!-- ENGLISH -->
-        <div id="en" class="section active">
-            <p><strong>dB Meter: Sound Level Measure</strong><br>
-            <em>Last updated: March 13, 2026</em></p>
-
-            <h2>Overview</h2>
-            <p>dB Meter ("the App") is a sound level measurement tool developed by Ufuk Özdemir. Your privacy is important to us. This policy explains what data the App accesses, how it is used, and your rights.</p>
-
-            <h2>Data We Access</h2>
-
-            <h3>Microphone</h3>
-            <p>The App accesses your device's microphone <strong>solely</strong> to measure ambient sound levels in real-time. Audio data is processed entirely on your device. <strong>No audio is recorded, stored, or transmitted.</strong></p>
-
-            <h3>Location (Optional)</h3>
-            <p>If you grant permission, the App accesses your approximate location to display a place name on measurement result cards you share. Location data is:</p>
-            <ul>
-                <li>Used only at the moment of measurement</li>
-                <li>Never stored on any server</li>
-                <li>Never transmitted to any third party</li>
-                <li>Included only on cards you choose to share</li>
-            </ul>
-            <p>You can deny location access and still use all core features of the App.</p>
-
-            <h2>Data We Collect</h2>
-            <p><strong>We do not collect any personal data.</strong> The App does not create user accounts, does not require registration, does not track your usage behavior, does not use analytics services, and does not share data with third parties.</p>
-
-            <h2>Advertising</h2>
-            <p>The App displays ads provided by Google AdMob. Google may collect device identifiers and usage data for ad personalization in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. You can opt out of personalized ads in your device's privacy settings.</p>
-
-            <h2>Data Storage</h2>
-            <p>All measurement data remains on your device. The App does not use cloud storage or external databases.</p>
-
-            <h2>Children's Privacy</h2>
-            <p>The App does not knowingly collect information from children under 13. The App is rated for all ages.</p>
-
-            <h2>Changes to This Policy</h2>
-            <p>We may update this policy from time to time. Changes will be posted on this page with an updated revision date.</p>
-
-            <h2>Contact</h2>
-            <p>If you have questions about this policy, contact us at:<br>
-            <a href="mailto:theknack2020@gmail.com">theknack2020@gmail.com</a></p>
-        </div>
-
-        <!-- TURKISH -->
-        <div id="tr" class="section">
-            <p><strong>Desibel Ölçer: Ses Seviyesi</strong><br>
-            <em>Son güncelleme: 13 Mart 2026</em></p>
-
-            <h2>Genel Bakış</h2>
-            <p>Desibel Ölçer ("Uygulama"), Ufuk Özdemir tarafından geliştirilen bir ses seviyesi ölçüm aracıdır. Gizliliğiniz bizim için önemlidir. Bu politika, Uygulamanın hangi verilere eriştiğini, nasıl kullanıldığını ve haklarınızı açıklar.</p>
-
-            <h2>Eriştiğimiz Veriler</h2>
-
-            <h3>Mikrofon</h3>
-            <p>Uygulama, ortam ses seviyesini gerçek zamanlı ölçmek için cihazınızın mikrofonuna erişir. Ses verileri tamamen cihazınızda işlenir. <strong>Hiçbir ses kaydedilmez, saklanmaz veya iletilmez.</strong></p>
-
-            <h3>Konum (İsteğe Bağlı)</h3>
-            <p>İzin verirseniz, Uygulama paylaştığınız ölçüm kartlarında yer adı göstermek için yaklaşık konumunuza erişir. Konum verileri:</p>
-            <ul>
-                <li>Yalnızca ölçüm anında kullanılır</li>
-                <li>Hiçbir sunucuda saklanmaz</li>
-                <li>Üçüncü taraflarla paylaşılmaz</li>
-                <li>Yalnızca paylaşmayı seçtiğiniz kartlarda yer alır</li>
-            </ul>
-            <p>Konum erişimini reddedebilir ve Uygulamanın tüm temel özelliklerini kullanmaya devam edebilirsiniz.</p>
-
-            <h2>Topladığımız Veriler</h2>
-            <p><strong>Hiçbir kişisel veri toplamıyoruz.</strong> Uygulama hesap oluşturmaz, kayıt gerektirmez, kullanım davranışınızı izlemez, analiz hizmetleri kullanmaz ve verileri üçüncü taraflarla paylaşmaz.</p>
-
-            <h2>Reklam</h2>
-            <p>Uygulama, Google AdMob tarafından sağlanan reklamları gösterir. Google, reklam kişiselleştirme için cihaz tanımlayıcıları ve kullanım verilerini <a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a> kapsamında toplayabilir.</p>
-
-            <h2>Veri Depolama</h2>
-            <p>Tüm ölçüm verileri cihazınızda kalır. Uygulama bulut depolama veya harici veritabanı kullanmaz.</p>
-
-            <h2>Çocukların Gizliliği</h2>
-            <p>Uygulama, 13 yaşın altındaki çocuklardan bilerek bilgi toplamaz.</p>
-
-            <h2>Politika Değişiklikleri</h2>
-            <p>Bu politikayı zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada güncellenmiş tarihle yayınlanır.</p>
-
-            <h2>İletişim</h2>
-            <p>Sorularınız için:<br>
-            <a href="mailto:theknack2020@gmail.com">theknack2020@gmail.com</a></p>
-        </div>
+        <p style="margin-top: 40px; text-align: center; font-size: 13px; color: #666;">© 2026 TheKnack</p>
     </div>
-
-    <script>
-        function switchLang(lang, el) {
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.getElementById(lang).classList.add('active');
-            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
-            el.classList.add('active');
-        }
-    </script>
 </body>
 </html>
