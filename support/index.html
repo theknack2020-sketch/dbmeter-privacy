@@ -1,9 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Support — dB Meter</title>
-<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:700px;margin:0 auto;padding:20px;color:#333;line-height:1.6}h1{color:#E8A40E}a{color:#E8A40E}</style></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support: dB Meter</title>
+<meta name="description" content="Help for dB Meter: accuracy, calibration, dBA, dBC and dBZ, the noise dose, history, clips, restoring dB Meter Pro and contact.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --field: #FBF7EE; --surface: #FFFFFF; --ink: #1A1208; --secondary: #5B5244;
+    --hairline: #E6DCC8; --link: #8A5A00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --field: #0A0A0F; --surface: #15130F; --ink: #F3EEE4; --secondary: #B5AC9C;
+      --hairline: #2A251D; --link: #FFB040;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--field); color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 72px; }
+  h1 { font-size: 32px; line-height: 1.15; margin: 8px 0 4px; }
+  h2 { font-size: 20px; line-height: 1.3; margin: 40px 0 4px; }
+  h3 { font-size: 17px; line-height: 1.35; margin: 24px 0 4px; }
+  p, li { overflow-wrap: break-word; }
+  p { margin: 4px 0 8px; }
+  .sub { color: var(--secondary); margin: 0 0 20px; }
+  .contact { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: 16px 18px; }
+  a { color: var(--link); }
+  ul { padding-left: 1.2em; margin: 6px 0; }
+  li { margin: 4px 0; }
+  .toc a { display: inline-block; min-height: 32px; }
+  .back { display: inline-block; min-height: 44px; padding: 10px 0; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--hairline); color: var(--secondary); font-size: 15px; }
+  footer a { display: inline-block; margin: 0 16px 8px 0; min-height: 24px; }
+</style>
+</head>
 <body>
-<h1>dB Meter Support</h1>
-<p>Need help? Contact us at <a href="mailto:theknack2020@gmail.com">theknack2020@gmail.com</a></p>
-<p>We typically respond within 24 hours.</p>
-</body></html>
+<main>
+  <a class="back" href="../">dB Meter</a>
+  <h1>dB Meter Support</h1>
+  <p class="sub">Answers for dB Meter 3.0 on iPhone and iPad.</p>
+
+  <div class="contact">
+    <p><strong>Still stuck?</strong> Write to <a href="mailto:theknack2020@gmail.com?subject=dB%20Meter%20Support">theknack2020@gmail.com</a> with your device model and iOS version. In the app: Settings, Contact Support.</p>
+  </div>
+
+  <p class="toc">Jump to: <a href="#accuracy">Accuracy</a> &middot; <a href="#calibration">Calibration</a> &middot; <a href="#weighting">dBA, dBC, dBZ</a> &middot; <a href="#dose">Noise dose</a> &middot; <a href="#measuring">Measuring</a> &middot; <a href="#history">History and CSV</a> &middot; <a href="#clips">Clips</a> &middot; <a href="#pro">Free and Pro</a> &middot; <a href="#restore">Restore</a></p>
+
+  <h2 id="accuracy">Accuracy</h2>
+  <h3>How accurate is dB Meter?</h3>
+  <p>Its readings are estimates. The maths follows the standards: the A- and C-weighting follow the IEC 61672 curves, the meter uses the Fast time weighting, and the average is the true sound energy average (LAeq). The limit is the microphone. Phone microphones differ by model, are tuned for speech, and are affected by cases, covers and where you hold the phone, so dB Meter can read differently from a calibrated sound level meter, most of all at very quiet and very loud levels. To get closer, calibrate it against a reference meter (below).</p>
+  <h3>What do &ldquo;&lt;30&rdquo; and OVER mean?</h3>
+  <p>&ldquo;&lt;30&rdquo; means the room is quieter than the microphone can measure, so dB Meter does not guess a number. OVER means the sound was too loud for the microphone input and the real level was higher than shown; the summary remembers it.</p>
+  <h3>Is dB Meter a medical device?</h3>
+  <p>No. It is not a medical device or a certified sound level meter, and not a tool for workplace compliance or legal evidence. For those, use a calibrated instrument.</p>
+
+  <h2 id="calibration">Calibration</h2>
+  <h3>How do I calibrate dB Meter?</h3>
+  <p>Calibration is free. Put your phone next to a calibrated sound level meter set to A-weighting, with a steady sound playing. Open Settings, Measurement, Calibration, and move the slider (up to 10 dB either way, in 0.5 dB steps) until dB Meter shows the same level. The meter then says &ldquo;Calibrated&rdquo; with your offset under the number. Calibration applies to every new measurement and to today's noise dose.</p>
+  <h3>I plugged in another microphone</h3>
+  <p>dB Meter keeps measuring with it and tells you its readings can differ from the built-in microphone. Calibrate again for that microphone if you need to.</p>
+
+  <h2 id="weighting">dBA, dBC and dBZ</h2>
+  <p><strong>dBA</strong> follows how the ear hears everyday sound and is used for noise exposure. <strong>dBC</strong> counts more of the low, rumbling sound and is used for loud music and peaks. <strong>dBZ</strong> has no weighting. Everyone measures in dBA; dBC and dBZ are part of dB Meter Pro (Settings, Measurement, Frequency Weighting). The peak in each summary is C-weighted.</p>
+
+  <h2 id="dose">Noise dose</h2>
+  <h3>What is today's noise dose?</h3>
+  <p>How much of a day's limit you have used, by the NIOSH method: 85 dBA for 8 hours is 100%, and every 3 dB louder halves the time (88 dBA for 4 hours, 91 dBA for 2 hours). It is free, on the Insights tab, and starts again at midnight.</p>
+  <!-- INTEGRATION: if the integration stream ships the dosimeter rule (Slow response, levels under 80 dBA add nothing), add: Like a NIOSH dosimeter, it uses the Slow response, and levels under 80 dBA add nothing. -->
+  <h3>Why is my dose lower than I expected?</h3>
+  <p>It counts only the time you measure with dB Meter open, not the rest of your day. <!-- PHASE2: replace with: It counts only the time you measure, also with the screen locked, not the rest of your day. --></p>
+  <h3>What does dB Meter Pro add?</h3>
+  <p>The measured average (LAeq), the 8-hour TWA, the time left today at 85 dBA, and an alert at 50, 80 and 100% of today's dose while you measure, with Keep Measuring and Stop Measuring.</p>
+  <h3>NIOSH or OSHA?</h3>
+  <p>dB Meter uses NIOSH, which is stricter than the OSHA limit in US workplaces (90 dBA for 8 hours, 5 dB exchange rate). Neither turns a phone estimate into a compliance measurement.</p>
+
+  <h2 id="measuring">Measuring</h2>
+  <h3>How do I start?</h3>
+  <p>Tap Start on the Meter tab, and Stop when you are done. You can also say &ldquo;Measure noise with dB Meter&rdquo; to Siri. Measurements of a few seconds or more are saved.</p>
+  <h3>Why did my measurement stop?</h3>
+  <p>A measurement ends, and is saved, when dB Meter leaves the screen or the screen locks. A phone call or Siri also ends it; what was measured is saved, and Measure Again starts a new one when the interruption is over. <!-- PHASE2: replace the first sentence with: A measurement keeps running when the screen locks or you switch apps, with a Live Activity on the Lock Screen; tap Stop there or in the app to end it. --></p>
+  <h3>dB Meter can't hear anything</h3>
+  <p>Allow the microphone in iOS Settings, Privacy &amp; Security, Microphone, dB Meter. The Meter tab has an Open Settings button when access is off.</p>
+
+  <h2 id="history">History and CSV</h2>
+  <h3>How long are measurements kept?</h3>
+  <p>They stay on your device until you delete them. Free shows the last 7 days; dB Meter Pro opens them all. You can delete any measurement, even one you can't open, and undo it for a few seconds.</p>
+  <h3>How do I find a measurement?</h3>
+  <p>Search History by level (&ldquo;loud&rdquo;), a dB value (&ldquo;72&rdquo;) or a date (&ldquo;Nov 11&rdquo;, &ldquo;yesterday&rdquo;), or use the date filter.</p>
+  <h3>How do I export CSV?</h3>
+  <p>With dB Meter Pro, tap the share button at the top of History. The file has the date, length, average, min, max and level of each measurement shown. If your subscription ended, you can still export what you measured while you had it.</p>
+  <h3>How do I delete everything?</h3>
+  <p>Settings, Reset All Data. It lists what will go (measurements, clips, exports, today's dose, streak and achievements, settings) and cannot be undone. Your subscription is not affected.</p>
+
+  <h2 id="clips">Audio clips</h2>
+  <p>With dB Meter Pro, record a clip in Settings, Recordings. Clips play in the app and show the measurement taken at the same time, if there is one. They stay on your device; share or delete them there. If your subscription ends, you can still play, share and delete them.</p>
+
+  <h2 id="pro">Free and dB Meter Pro</h2>
+  <p><strong>Free:</strong> the live meter in dBA with min, average and max, calibration, today's noise dose, 7 days of history, the widget and Siri. No ads.</p>
+  <p><strong>dB Meter Pro:</strong> dBC and dBZ, dose alerts and the NIOSH detail, charts, unlimited history, CSV export, audio clips and all 5 themes. Monthly or yearly; new subscribers get 7 days free on the yearly plan. There are no weekly plans and no ads.</p>
+  <h3>How do I cancel?</h3>
+  <p>In iOS Settings, your name, Subscriptions, dB Meter Pro. Pro stays on until the end of the period you paid for. <!-- INTEGRATION: add: Or tap Manage Subscription at the top of dB Meter's Settings. --></p>
+
+  <h2 id="restore">Restore</h2>
+  <h3>I have dB Meter Pro but the app says Free</h3>
+  <p>Open the dB Meter Pro screen (for example from the top of Settings) and tap Restore, signed in with the Apple Account that bought it. dB Meter tells you what it found. Family members can share a monthly or yearly plan through Family Sharing.</p>
+  <h3>I bought Lifetime Pro</h3>
+  <p>Lifetime Pro is no longer sold, and everyone who bought it keeps dB Meter Pro. Restore it the same way; the dB Meter Pro screen then says you have dB Meter Pro. <!-- INTEGRATION: add: Settings shows &ldquo;Lifetime Pro: yours forever&rdquo;. --></p>
+
+  <footer>
+    <a href="../">dB Meter</a>
+    <a href="../privacy/">Privacy Policy</a>
+    <a href="../terms/">Terms of Use</a>
+    <a href="mailto:theknack2020@gmail.com">theknack2020@gmail.com</a>
+    <div>&copy; 2026 TheKnack</div>
+  </footer>
+</main>
+</body>
+</html>
