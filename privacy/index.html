@@ -54,7 +54,7 @@
   <h2>The microphone</h2>
   <p>dB Meter asks for the microphone so it can measure the sound level around you. It listens only while a measurement runs. The sound is turned into numbers (the level, min, average, max and peak) on your device, in real time, and the sound itself is not saved.</p>
   <p>The one exception is an audio clip you choose to record with dB Meter Pro (Settings, Recordings). A clip is saved as an audio file in dB Meter's storage on your device, protected by iOS so it cannot be read while your device is locked. It is never uploaded. You can play, share or delete it in the app; it leaves your device only if you share it yourself.</p>
-  <!-- PHASE2: <p>If you start a measurement and then lock the screen or switch apps, dB Meter keeps measuring until you stop it, and iOS shows its microphone indicator the whole time. dB Meter never starts the microphone by itself.</p> -->
+  <p>If you start a measurement and then lock the screen or switch apps, dB Meter keeps measuring until you stop it, for up to 8 hours, and iOS shows its microphone indicator the whole time. dB Meter never starts the microphone by itself: only you start a measurement, in the app, from a widget, from Control Center or by asking Siri.</p>
 
   <h2>What stays on your device</h2>
   <ul>
@@ -62,9 +62,11 @@
     <li>Today's noise dose, your settings, your streak and achievements</li>
     <li>Audio clips you record (dB Meter Pro)</li>
     <li>A CSV file, only while you share it: dB Meter deletes it when the share sheet closes</li>
+    <li>While a measurement runs, a short summary every 10 seconds, so it is not lost if iOS closes dB Meter</li>
+    <li>For the widgets: a copy of your latest measurement and today's dose, in an App Group, a storage area on your device that only dB Meter and its widgets can read</li>
   </ul>
   <p>dB Meter sends none of this anywhere and has no server. Like all app data, it can be part of your own iPhone or iPad backup if you use iCloud Backup or back up to a computer.</p>
-  <!-- PHASE2: <p>The widget and the Live Activity show your latest measurement and today's dose on your own device, from dB Meter's own storage.</p> -->
+  <p>The widgets and the Live Activity show your readings on your own device. When you ask Siri or Shortcuts, they get only the answer you asked for (the level, or today's dose); a Siri check is saved in your History like any measurement.</p>
 
   <h2>Notifications</h2>
   <p>If you allow them, dB Meter schedules a daily reminder, a reminder when your streak is at risk, and a nudge after a few days without a measurement, all on your device. They are local notifications: no server sends them. Turn the daily reminder off in dB Meter's Settings, or all of them in iOS Settings.</p>
@@ -73,7 +75,7 @@
   <p>dB Meter Pro is sold through Apple's App Store as a monthly or yearly subscription. Apple handles the payment; TheKnack never sees your payment details or your Apple Account. dB Meter checks on your device, with Apple's StoreKit, whether you have dB Meter Pro.</p>
 
   <h2>Links that leave the app</h2>
-  <p>Only when you tap them: the Terms of Use and this policy open in an in-app browser and are hosted by GitHub Pages, whose own privacy statement covers your visit; Rate on App Store, Share App and More Apps open Apple's App Store or share sheet; Contact Support opens your email app.</p>
+  <p>Only when you tap them: the Terms of Use and this policy open in an in-app browser and are hosted by GitHub Pages, whose own privacy statement covers your visit; Rate on App Store and the Caliper card open Apple's App Store, Share App opens the share sheet; Contact Support opens your email app.</p>
 
   <h2>Children</h2>
   <p>dB Meter collects no information from anyone, including children.</p>

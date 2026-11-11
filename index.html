@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>dB Meter: Decibel Meter and Noise Dose</title>
-<meta name="description" content="A live decibel meter for iPhone and iPad. The full sound meter is free forever: no ads, no paywall at launch, no weekly plans. Readings are estimates from your phone's microphone.">
+<meta name="description" content="A live decibel meter and noise dosimeter for iPhone and iPad. The full sound meter is free forever: no ads, no paywall at launch, no weekly plans. Readings are estimates from your microphone.">
 <style>
   :root {
     color-scheme: light dark;
@@ -82,15 +82,22 @@
   <h2>What you see</h2>
   <ul>
     <li>A large live reading in dBA (A-weighted, Fast response), with min, average and max as you measure. The average is the true sound energy average (LAeq).</li>
-    <li>A level label and an everyday comparison, such as &ldquo;Like a library&rdquo; or &ldquo;Like a loud concert&rdquo;.</li>
+    <li>One scale in five zones, from Quiet to Dangerous, with the 85 dBA 8-hour limit marked, an everyday comparison and a graph of the last minute.</li>
     <li>&ldquo;&lt;30&rdquo; when it is quieter than the microphone can hear, and OVER when the input overloads.</li>
     <li>A summary when you stop: average, min, max and peak, to share as an image.</li>
     <li>Every measurement of a few seconds or more is saved, with date, time and length. Search by level, a dB value or a date.</li>
-    <!-- PHASE2: <li>Keep measuring with the screen locked: a Live Activity shows the level on the Lock Screen and in the Dynamic Island, with Stop.</li> -->
+    <li>It keeps measuring with the screen locked, for up to 8 hours. On iPhone a Live Activity shows the level on the Lock Screen and in the Dynamic Island, with Stop.</li>
   </ul>
 
   <h2>Today's noise dose</h2>
-  <p>dB Meter adds up how much of today's daily limit you have used, by the NIOSH method: 85 dBA for 8 hours is 100%, and every 3 dB louder halves the time. It counts the time you measure with dB Meter open, not the rest of your day. <!-- PHASE2: replace the last sentence with: It counts the time you measure, also with the screen locked, not the rest of your day. --></p>
+  <p>dB Meter adds up how much of today's daily limit you have used, counted like a NIOSH dosimeter: 85 dBA for 8 hours is 100%, every 3 dB louder halves the time, and sound below 80 dBA adds nothing. It counts the time you measure, also with the screen locked, not the rest of your day.</p>
+
+  <h2>Widgets, Siri and Control Center</h2>
+  <ul>
+    <li>Home Screen and Lock Screen widgets show your latest measurement and today's dose. A tap starts measuring.</li>
+    <li>Ask Siri &ldquo;How loud is it with dB Meter?&rdquo; and hear the level after a few seconds. Shortcuts can also tell you today's noise dose.</li>
+    <li>Start measuring from Control Center or the Action button (iOS 18 and later).</li>
+  </ul>
 
   <h2>Free, and dB Meter Pro</h2>
   <div class="cards">
@@ -101,7 +108,8 @@
         <li>Calibration against a reference meter, up to 10 dB either way</li>
         <li>Today's noise dose</li>
         <li>7 days of saved measurements</li>
-        <li>The widget and Siri</li>
+        <li>Measuring with the screen locked</li>
+        <li>Widgets, Siri and Control Center</li>
       </ul>
     </div>
     <div class="card">
