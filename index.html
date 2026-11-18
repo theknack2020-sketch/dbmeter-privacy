@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>dB Meter: Decibel Meter and Noise Dose</title>
-<meta name="description" content="A live decibel meter and noise dosimeter for iPhone and iPad. The full sound meter is free forever: no ads, no paywall at launch, no weekly plans. Readings are estimates from your microphone.">
+<meta http-equiv="refresh" content="0; url=https://theknackapps.com/db-meter/">
+<title>dB Meter: Decibel Sound Level</title>
+<meta name="description" content="This page has moved to theknackapps.com/db-meter/.">
+<link rel="canonical" href="https://theknackapps.com/db-meter/">
 <style>
   :root {
     color-scheme: light dark;
-    --field: #FBF7EE; --surface: #FFFFFF; --ink: #1A1208; --secondary: #5B5244;
-    --hairline: #E6DCC8; --link: #8A5A00; --accent: #F2941E; --on-accent: #1A1208;
+    --field: #FBF7EE; --ink: #1A1208; --secondary: #5B5244;
+    --hairline: #E6DCC8; --link: #8A5A00;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --field: #0A0A0F; --surface: #15130F; --ink: #F3EEE4; --secondary: #B5AC9C;
-      --hairline: #2A251D; --link: #FFB040; --accent: #FFB040; --on-accent: #1A1208;
+      --field: #0A0A0F; --ink: #F3EEE4; --secondary: #B5AC9C;
+      --hairline: #2A251D; --link: #FFB040;
     }
   }
   * { box-sizing: border-box; }
@@ -22,122 +24,25 @@
   body { margin: 0; background: var(--field); color: var(--ink);
     font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   main { max-width: 680px; margin: 0 auto; padding: 40px 16px 72px; }
-  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.4px; margin: 20px 0 4px; }
-  h2 { font-size: 20px; line-height: 1.3; margin: 40px 0 8px; }
-  h3 { font-size: 17px; margin: 0 0 6px; }
-  p, li { overflow-wrap: break-word; }
-  .sub { color: var(--secondary); margin: 0 0 20px; font-size: 19px; }
-  .lead { font-size: 19px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.4px; margin: 20px 0 12px; }
+  p { overflow-wrap: break-word; margin: 4px 0 8px; font-size: 19px; }
   a { color: var(--link); }
-  ul { padding-left: 1.2em; margin: 8px 0; }
-  li { margin: 4px 0; }
-  .icon { width: 96px; height: 96px; border-radius: 22px; display: block; }
-  .icon.dark { display: none; }
-  @media (prefers-color-scheme: dark) { .icon.light { display: none; } .icon.dark { display: block; } }
-  .button { display: inline-block; margin: 8px 0 4px; padding: 12px 20px; border-radius: 12px;
-    background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 600; min-height: 44px; }
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-  .card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: 16px 18px; }
-  .card ul { margin: 0; }
-  .note { color: var(--secondary); font-size: 15px; }
+  p a { display: inline-block; min-height: 44px; padding: 7px 0; }
   footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--hairline); color: var(--secondary); font-size: 15px; }
-  footer a { display: inline-block; margin: 0 16px 8px 0; min-height: 24px; }
-  @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } h1 { font-size: 30px; } }
+  footer a { display: inline-block; margin: 0 16px 8px 0; min-height: 44px; padding: 10px 0; }
+  @media (max-width: 560px) { h1 { font-size: 30px; } }
 </style>
 </head>
 <body>
 <main>
-  <svg class="icon light" viewBox="0 0 1024 1024" role="img" aria-label="dB Meter icon">
-    <defs><linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFBE55"/><stop offset="1" stop-color="#F2941E"/></linearGradient></defs>
-    <rect width="1024" height="1024" fill="url(#fl)"/>
-    <g stroke-width="22" stroke-linejoin="round">
-      <path d="M140,780 L239,704.7 L239,780 Z" fill="#1A1208" stroke="#1A1208"/>
-      <path d="M269,780 L269,681.9 L368,606.5 L368,780 Z" fill="#1A1208" stroke="#1A1208"/>
-      <path d="M398,780 L398,583.7 L497,508.4 L497,780 Z" fill="#1A1208" stroke="#1A1208"/>
-      <path d="M527,780 L527,485.6 L626,410.3 L626,780 Z" fill="#FFF4DE" stroke="#FFF4DE"/>
-      <path d="M656,780 L656,387.5 L755,312.1 L755,780 Z" fill="#D38E36" stroke="#D38E36"/>
-      <path d="M785,780 L785,289.3 L884,214 L884,780 Z" fill="#D38E36" stroke="#D38E36"/>
-    </g>
-  </svg>
-  <svg class="icon dark" viewBox="0 0 1024 1024" role="img" aria-label="dB Meter icon">
-    <defs><linearGradient id="fd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A140C"/><stop offset="1" stop-color="#0E0B07"/></linearGradient></defs>
-    <rect width="1024" height="1024" fill="url(#fd)"/>
-    <g stroke-width="22" stroke-linejoin="round">
-      <path d="M140,780 L239,704.7 L239,780 Z" fill="#FFB040" stroke="#FFB040"/>
-      <path d="M269,780 L269,681.9 L368,606.5 L368,780 Z" fill="#FFB040" stroke="#FFB040"/>
-      <path d="M398,780 L398,583.7 L497,508.4 L497,780 Z" fill="#FFB040" stroke="#FFB040"/>
-      <path d="M527,780 L527,485.6 L626,410.3 L626,780 Z" fill="#FF6A2A" stroke="#FF6A2A"/>
-      <path d="M656,780 L656,387.5 L755,312.1 L755,780 Z" fill="#2B2117" stroke="#2B2117"/>
-      <path d="M785,780 L785,289.3 L884,214 L884,780 Z" fill="#2B2117" stroke="#2B2117"/>
-    </g>
-  </svg>
-
-  <h1>dB Meter</h1>
-  <p class="sub">Decibel meter and noise dose for iPhone and iPad</p>
-
-  <p class="lead">See how loud it is around you, live, in decibels. The full sound meter is free forever: no ads, no paywall at launch, no weekly plans.</p>
-
-  <a class="button" href="https://apps.apple.com/app/id6760597296">dB Meter on the App Store</a>
-
-  <h2>What you see</h2>
-  <ul>
-    <li>A large live reading in dBA (A-weighted, Fast response), with min, average and max as you measure. The average is the true sound energy average (LAeq).</li>
-    <li>One scale in five zones, from Quiet to Dangerous, with the 85 dBA 8-hour limit marked, an everyday comparison and a graph of the last minute.</li>
-    <li>&ldquo;&lt;30&rdquo; when it is quieter than the microphone can hear, and OVER when the input overloads.</li>
-    <li>A summary when you stop: average, min, max and peak, to share as an image.</li>
-    <li>Every measurement of a few seconds or more is saved, with date, time and length. Search by level, a dB value or a date.</li>
-    <li>It keeps measuring with the screen locked, for up to 8 hours. On iPhone a Live Activity shows the level on the Lock Screen and in the Dynamic Island, with Stop.</li>
-  </ul>
-
-  <h2>Today's noise dose</h2>
-  <p>dB Meter adds up how much of today's daily limit you have used, counted like a NIOSH dosimeter: 85 dBA for 8 hours is 100%, every 3 dB louder halves the time, and sound below 80 dBA adds nothing. It counts the time you measure, also with the screen locked, not the rest of your day.</p>
-
-  <h2>Widgets, Siri and Control Center</h2>
-  <ul>
-    <li>Home Screen and Lock Screen widgets show your latest measurement and today's dose. A tap starts measuring.</li>
-    <li>Ask Siri &ldquo;How loud is it with dB Meter?&rdquo; and hear the level after a few seconds. Shortcuts can also tell you today's noise dose.</li>
-    <li>Start measuring from Control Center or the Action button (iOS 18 and later).</li>
-  </ul>
-
-  <h2>Free, and dB Meter Pro</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Free</h3>
-      <ul>
-        <li>The live meter in dBA, with min, average and max</li>
-        <li>Calibration against a reference meter, up to 10 dB either way</li>
-        <li>Today's noise dose</li>
-        <li>7 days of saved measurements</li>
-        <li>Measuring with the screen locked</li>
-        <li>Widgets, Siri and Control Center</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>dB Meter Pro</h3>
-      <ul>
-        <li>dBC and dBZ weighting</li>
-        <li>Dose alerts at 50, 80 and 100% while you measure, and the NIOSH detail</li>
-        <li>Charts, unlimited history and CSV export</li>
-        <li>Audio clips, kept on your device</li>
-        <li>All 5 themes</li>
-        <li>Monthly or yearly; new subscribers get 7 days free on the yearly plan</li>
-      </ul>
-    </div>
-  </div>
-  <p class="note">If dB Meter Pro ends, what you measured while subscribed stays open and exportable, and your clips stay yours. If you bought Lifetime Pro before version 3.0, you keep dB Meter Pro.</p>
-
-  <h2>An honest estimate</h2>
-  <p>Readings come from your phone's microphone, so they are estimates. dB Meter is not a medical device or a certified sound level meter, and not a tool for workplace compliance or legal use. If you have a calibrated meter, you can match dB Meter to it in Settings, for free. <a href="support/#accuracy">How accurate is it?</a></p>
-
-  <h2>Private</h2>
-  <p>No account, no ads, no analytics, no tracking. Sound is measured on your device and nothing is uploaded. Audio clips are saved only when you record one, and stay on your device. <a href="privacy/">Read the privacy policy</a>.</p>
+  <h1>dB Meter: Decibel Sound Level</h1>
+  <p>The app's page is at <a href="https://theknackapps.com/db-meter/">theknackapps.com/db-meter/</a>.</p>
 
   <footer>
     <a href="support/">Support</a>
     <a href="privacy/">Privacy Policy</a>
     <a href="terms/">Terms of Use</a>
     <a href="mailto:support@theknackapps.com">support@theknackapps.com</a>
-    <div>&copy; 2026 TheKnack</div>
   </footer>
 </main>
 </body>
